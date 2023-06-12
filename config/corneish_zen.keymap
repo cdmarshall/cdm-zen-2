@@ -16,22 +16,30 @@
 
         numpad_up {
             bindings = <&kp UP>;
-            key-positions = <37 24 8>;
+            key-positions = <24 8>;
+            timeout-ms = <1000>;
+            layers = <1>;
         };
 
         numpad_down {
             bindings = <&kp DOWN>;
-            key-positions = <37 24 20>;
+            key-positions = <24 20>;
+            timeout-ms = <1000>;
+            layers = <1>;
         };
 
         numpad_left {
             bindings = <&kp LEFT>;
-            key-positions = <37 24 19>;
+            key-positions = <24 19>;
+            timeout-ms = <1000>;
+            layers = <1>;
         };
 
         numpad_right {
             bindings = <&kp RIGHT>;
-            key-positions = <37 24 21>;
+            key-positions = <24 21>;
+            timeout-ms = <1000>;
+            layers = <1>;
         };
     };
 
