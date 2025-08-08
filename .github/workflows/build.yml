@@ -2,4 +2,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: cdmarshall/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
+    uses: cdmarshall/zmk/.github/workflows/build-user-config.yml
