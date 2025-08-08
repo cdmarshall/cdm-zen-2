@@ -1,5 +1,20 @@
+# .github/workflows/build.yml
+
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache
+          key: ${{ runner.os }}-build-${{ hashFiles('**/lockfiles') }}
+
+      # Call the reusable workflow
+      - name: Run ZMK build workflow
+        uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
